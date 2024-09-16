@@ -8,6 +8,7 @@ const Lists = ({ navigation  }: any) => {
 
     const handlePress = (itemId: any) => {
         setSelectedItem(itemId);
+        navigation.navigate('Login');
     };
 
     return (

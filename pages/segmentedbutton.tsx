@@ -5,14 +5,14 @@ import { Searchbar } from 'react-native-paper';
 import Lists from './list';
 import Flatlist from './flatlist';
 
-const SegmentedButton = () => {
+const SegmentedButton = ({navigation }:any) => {
     const [value, setValue] = React.useState('');
     const [searchQuery, setSearchQuery] = React.useState('');
 
     const renderContent = () => {
         switch (value) {
             case 'All':
-                return <Lists />;
+                return <Lists navigation={navigation}></Lists>
             case 'Watch':
                 return <Flatlist/>;
             case 'Gainers':

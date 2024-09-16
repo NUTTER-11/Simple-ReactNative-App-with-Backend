@@ -10,11 +10,11 @@ import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import Login from './pages/login';
-// import Signup from './pages/signup';
+import Signup from './pages/signup';
 import Home from './pages/Home';
 import Login from './pages/login';
 import Card1 from './pages/card1';
-
+import SegmentedButton from './pages/segmentedbutton';
 
 
 const Stack = createNativeStackNavigator();
@@ -24,11 +24,10 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home"   >
         <Stack.Screen name="Home" component={Home} options={{ title: 'My home' }} />
-        <Stack.Screen name="charts" component={Card1} options={{ title: 'heyome' }}/>
-          <Stack.Screen name="Login" component={Login} />
-        {/* <Stack.Screen name="Sign-Up" component={Signup} /> */}
+        <Stack.Screen name="Login" component={Login} />
+        {/* <Stack.Screen name="SegmentedButton" component={SegmentedButton} /> */}
       </Stack.Navigator>
-    </NavigationContainer> 
+    </NavigationContainer>
 
   );
 }

@@ -56,7 +56,7 @@ function Card1({ navigation }: any): React.JSX.Element {
                         </Card>}
                     />
                     <Text style={styles.Curriencies}>Popular Currencies </Text>
-                    <Lists></Lists>
+                    <Lists navigation={navigation}></Lists>
                 </View>
             </View>
         </ScrollView>
